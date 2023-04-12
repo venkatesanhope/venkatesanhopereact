@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { useState,useCallback,useMemo } from "react";
-
+import './Tasktwo.css';
 
 const Tasktwo = () =>
 {
