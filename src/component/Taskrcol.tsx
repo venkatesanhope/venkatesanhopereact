@@ -1,6 +1,7 @@
 import React  from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState, useCallback, useMemo } from "react";
+import { arrayBuffer } from 'stream/consumers';
 
 
 const Taskrcol = () => {
@@ -71,4 +72,11 @@ const Taskrcol = () => {
     )
 }
 //<button onClick={() => createtable({rownumber},{colnumber})}>createtable</button>
+
+// 1. how to Value push in array
+// 2.  Div elements split
+// 3. How to pass argument in function
+// 4.  
+
+
 export default Taskrcol
