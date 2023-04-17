@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
         <Header></Header>
-        <Dashboard></Dashboard>
+       
         <Studentinfo></Studentinfo>
         <Footer></Footer>
     </div>
@@ -20,3 +20,4 @@ function App() {
 export default App;
 // <Tasktwo></Tasktwo>
 //<Taskrcol></Taskrcol>
+// <Dashboard></Dashboard>

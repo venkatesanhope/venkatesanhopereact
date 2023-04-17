@@ -1,145 +1,226 @@
-import React from 'react'; 
+import { useCallback, useMemo, useState } from "react";
 import ReactDOM from 'react-dom/client';
 import './Studentinfo.css';
 const Studentinfo = () => {
+    var inputfirstname:any="";
+
+    const [firstName, setFirstName] = useState("Raghava");
+    const [lastName, setLastName] = useState("Lawrence rahman");
+    const [studentID, setstudentID] = useState(321000001);
+    const [standard, setstandard] = useState(4);
+    const [section, setsection] = useState(4);
+    const [roll, setroll] = useState(125);
+    const [acadyear, setacadyear] = useState(2004);
+    const [gender, setgender] = useState("Male");
+    const [religion, setreligion] = useState("Hindu");
+    const [blood, setblood] = useState("0+ve");
+    const [otherinfo, setotherinfo] = useState("This is a simple profile page design containing different sections of the student profile. ");
+    
+    
+
+    const listenForFirstNameChange = useCallback((e:any)=>{
+          setFirstName(e.target.value);
+    },[])
+
+    const listenForSecondNameChange = useCallback((e:any)=>{
+            setLastName(e.target.value);
+    },[])
+
+      const idChange = useCallback((e:any)=>{
+        setstudentID(e.target.value);
+    },[])
+
+    const stdChange = useCallback((e:any)=>{
+        setstandard(e.target.value);
+    },[])
+
+    const sectionChange = useCallback((e:any)=>{
+        setsection(e.target.value);
+    },[])
+
+    const rollChange = useCallback((e:any)=>{
+        setroll(e.target.value);
+    },[])
+
+     const acadyearChange = useCallback((e:any)=>{
+        setacadyear(e.target.value);
+    },[])
+
+    const genderChange = useCallback((e:any)=>{
+        setgender(e.target.value);
+    },[])
+
+    const religionChange = useCallback((e:any)=>{
+        setreligion(e.target.value);
+    },[])
+
+    const bloodChange = useCallback((e:any)=>{
+        setblood(e.target.value);
+    },[])
+    const otherinfoChange = useCallback((e:any)=>{
+        setotherinfo(e.target.value);
+    },[])
+    
 
     return (
         <>
-            <title>Student Information</title>
+           
             <div className="grid-container">
                 <div>
                     <table>
+                    <h5 >Student Information</h5><br></br>
                         <tr>
-                            <td>FIRST NAME</td>
-                            <td><input type="text" name="First_Name" />
+                            <td>First Name</td>
+                            <td><input type="text" name="First_Name"  value={firstName} onChange={listenForFirstNameChange} />
                             </td>
                         </tr>
                         <tr>
-                            <td>LAST NAME</td>
-                            <td><input type="text" name="Last_Name" />
+                            <td>Last Name</td>
+                            <td><input type="text" name="Last_Name" value={lastName} onChange={listenForSecondNameChange}/>
                             </td>
                         </tr>
                         <tr>
-                            <td>DATE OF BIRTH</td>
-
+                            <td>Student ID</td>
                             <td>
-                                <select name="Birthday_day" id="Birthday_Day">
-                                    <option value="-1">Day:</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-
-                                    <option value="31">31</option>
-                                </select>
-
-                                <select id="Birthday_Month" name="Birthday_Month">
-                                    <option value="-1">Month:</option>
-                                    <option value="January">Jan</option>
-                                    <option value="February">Feb</option>
-                                    <option value="March">Mar</option>
-                                    <option value="April">Apr</option>
-                                    <option value="May">May</option>
-                                    <option value="June">Jun</option>
-                                    <option value="July">Jul</option>
-                                    <option value="August">Aug</option>
-                                    <option value="September">Sep</option>
-                                    <option value="October">Oct</option>
-                                    <option value="November">Nov</option>
-                                    <option value="December">Dec</option>
-                                </select>
-
-                                <select name="Birthday_Year" id="Birthday_Year">
-
-                                    <option value="-1">Year:</option>
-                                    <option value="2012">2012</option>
-                                    <option value="2011">2011</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2009">2009</option>
-                                    <option value="2008">2008</option>
-                                    <option value="2007">2007</option>
-                                    <option value="2006">2006</option>
-                                    <option value="2005">2005</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2003">2003</option>
-                                    <option value="2002">2002</option>
-                                    <option value="2001">2001</option>
-                                    <option value="2000">2000</option>
-
-                                    <option value="1999">1999</option>
-                                    <option value="1998">1998</option>
-                                    <option value="1997">1997</option>
-                                    <option value="1996">1996</option>
-                                    <option value="1995">1995</option>
-                                    <option value="1994">1994</option>
-                                    <option value="1993">1993</option>
-                                    <option value="1992">1992</option>
-                                    <option value="1991">1991</option>
-                                    <option value="1990">1990</option>
-
-                                    <option value="1989">1989</option>
-                                    <option value="1988">1988</option>
-                                    <option value="1987">1987</option>
-                                    <option value="1986">1986</option>
-                                    <option value="1985">1985</option>
-                                    <option value="1984">1984</option>
-                                    <option value="1983">1983</option>
-                                    <option value="1982">1982</option>
-                                    <option value="1981">1981</option>
-                                    <option value="1980">1980</option>
-                                </select>
+                                <input type="text" name="Student_ID" value={studentID} onChange={idChange}/>
                             </td>
                         </tr>
                         <tr>
-                            <td>EMAIL ID</td>
-                            <td><input type="text" name="Email_Id" /></td>
+                            <td>ClassName</td>
+                            <td>
+                                <input type="text" name="Class_Name" value={standard} onChange={stdChange}/>
+                            </td>
                         </tr>
                         <tr>
-                            <td>MOBILE NUMBER</td>
+                            <td>Section</td>
                             <td>
-                                <input type="text" name="Mobile_Number" />
-                               
+                                <input type="text" name="Section" value={section} onChange={sectionChange}/>
+                            </td>
+                        </tr>
+                        <hr></hr>
+                        <tr>
+                            <td>Roll</td>
+                            <td>
+                                <input type="text" name="Roll" value={roll} onChange={rollChange}/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Academic Year</td>
+                            <td>
+                                <input type="text" name="Academic_Year" value={acadyear} onChange={acadyearChange}/>
                             </td>
                         </tr>
                         <tr>
                             <td>GENDER</td>
                             <td>
-                                Male <input type="radio" name="Gender" value="Male" />
-                                Female <input type="radio" name="Gender" value="Female" />
+                            <select value={gender} onChange={genderChange}>
+                                <option value="Male">MALE</option>
+                                <option value="Female">FEMALE</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td>Religion</td>
+                            <td>
+                                <select name="Religion" id="Religion" value={religion} onChange={religionChange}>
+                                    <option value="Select">Select:</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Muslim">Muslim</option>
+                                    <option value="Christian">Christian</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td>Blood Group</td>
+                            <td>
+                                <select name="Blood" id="blood" value={blood} onChange={bloodChange}>
+                                    <option value="Select">Select:</option>
+                                    <option value="o+ve">o+ve</option>
+                                    <option value="B+ve">B+ve</option>
+                                    <option value="B-ve">B-ve</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <hr></hr>
+                        <tr>
+                            <td>Other Informations</td>
+                            <td>
+                                <textarea value={otherinfo} onChange={otherinfoChange}></textarea> 
+                                
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div>2</div>
+
+                <div>
+                    <div className="student-profile py-4">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-4">
+                                    <div className="card shadow-sm">
+                                        <div className="card-header bg-transparent text-center">
+                                            <img className="profile_img" src="https://cdn-icons-png.flaticon.com/512/5850/5850276.png" alt="student dp"></img>
+                                            <h3>{firstName+" "}{lastName}</h3>
+                                        </div>
+                                        <div className="card-body" >
+                                            <p className="mb-0"><strong className="pr-1">Student ID:</strong>{studentID}</p>
+                                            <p className="mb-0"><strong className="pr-1">Standard:</strong>{standard}</p>
+                                            <p className="mb-0"><strong className="pr-1">Section:</strong>{section}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-8">
+                                    <div className="card shadow-sm">
+                                        <div className="card-header bg-transparent border-0">
+                                            <h3 className="mb-0"><i className="far fa-clone pr-1"></i>General Information</h3>
+                                        </div>
+                                        <div className="card-body pt-0">
+                                            <table className="table table-bordered">
+                                                <tr>
+                                                    <th >Roll</th>
+                                                    <td width="2%">:</td>
+                                                    <td>(roll)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Academic Year	</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{acadyear}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th >Gender</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{gender}</td>
+                                                </tr>
+                                               
+                                                <tr>
+                                                    <th >Religion</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{religion}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th >blood</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{blood}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div className="otherinfo" ></div>
+                                    <div className="card shadow-sm">
+                                        <div className="card-header bg-transparent border-0">
+                                            <h3 className="mb-0"><i className="far fa-clone pr-1"></i>Other Information</h3>
+                                        </div>
+                                        <div className="card-body pt-0">
+                                            <p>{otherinfo}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
 
