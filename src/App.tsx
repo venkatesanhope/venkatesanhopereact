@@ -6,12 +6,13 @@ import Dashboard from './component/Dashboard';
 import Tasktwo from './component/Tasktwo';
 import Taskrcol from './component/Taskrcol';
 import Studentinfo from './component/Studentinfo';
+import Task1 from './component/Task1/Task1';
 function App() {
   return (
     <div className="App">
         <Header></Header>
-       
-        <Studentinfo></Studentinfo>
+       <Task1></Task1>
+        
         <Footer></Footer>
     </div>
   );
@@ -20,4 +21,4 @@ function App() {
 export default App;
 // <Tasktwo></Tasktwo>
 //<Taskrcol></Taskrcol>
-// <Dashboard></Dashboard>
+// <Dashboard></Dashboard><Studentinfo></Studentinfo>
