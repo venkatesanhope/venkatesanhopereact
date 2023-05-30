@@ -62,7 +62,6 @@ const Task1 = () => {
 
         fetch("https://open.exchangerate-api.com/v6/latest")
             .then((res) => res.json())
-
             .then((data) => setGetvalue(data.rates[indiandropcurrency]))
             .catch((err) => console.log(err));
         console.log(getvalue)
@@ -73,7 +72,6 @@ const Task1 = () => {
 
         fetch("https://open.exchangerate-api.com/v6/latest")
             .then((res) => res.json())
-
             .then((data) => setGetdvalue(data.rates[dollardrop]))
             .catch((err) => console.log(err));
         console.log(getdvalue)
