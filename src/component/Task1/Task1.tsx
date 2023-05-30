@@ -2,49 +2,49 @@ import { useCallback, useMemo, useState } from "react";
 import { useEffect } from "react";
 
 import './Task1.css';
-var dummyVar= "";
+var dummyVar = "";
 const Task1 = () => {
 
 
-    const [dollardrop, setdollardrop] = useState("USD");
-    const [dollarcurrencycount, setdollarcurrencycount] = useState(1);
+    const [dollardrop, setDollardrop] = useState("USD");
+    const [dollarcurrencycount, setDollarcurrencycount] = useState(1);
 
 
-    const [indiandropcurrency, setindiandropcurrency] = useState("INR");
-    const [indcurrencycount, setindcurrencycount] = useState(0);
+    const [indiandropcurrency, setIndiadropcurrency] = useState("INR");
+    const [indcurrencycount, setIndiancurrencycount] = useState(0);
 
     const [getvalue, setGetvalue] = useState(0);
     const [getdvalue, setGetdvalue] = useState(0);
 
 
     const [count, setCount] = useState(0);
-    const [countinr, setcountinr] = useState(0);
+    const [countinr, setCountinr] = useState(0);
 
 
 
     const currencydopChange = useCallback((e: any) => {
-        setindiandropcurrency(e.target.value);
+        setIndiadropcurrency(e.target.value);
     }, [])
 
     const dollardropChange = useCallback((e: any) => {
-        setdollardrop(e.target.value);
+        setDollardrop(e.target.value);
     }, [])
 
 
 
     const indcurrencycountChange = useCallback((e: any) => {
-        setindcurrencycount(e.target.value);
+        setIndiancurrencycount(e.target.value);
     }, [])
 
     const dollarcurrencycountChange = useCallback((e: any) => {
-        setdollarcurrencycount(e.target.value);
+        setDollarcurrencycount(e.target.value);
     }, [])
 
-      const swap = () => { 
-         dummyVar =indiandropcurrency;
-        setindiandropcurrency(dollardrop)
-        setdollardrop(dummyVar);
-     }
+    const swap = () => {
+        dummyVar = indiandropcurrency;
+        setIndiadropcurrency(dollardrop)
+        setDollardrop(dummyVar);
+    }
 
 
 
@@ -53,10 +53,10 @@ const Task1 = () => {
     }, [getdvalue, getvalue]);
 
     const calculation2 = useMemo(() => {
-        setcountinr(dollarcurrencycount * count)
+        setCountinr(dollarcurrencycount * count)
     }, [count, dollarcurrencycount]);
 
-  
+
 
     useEffect(() => {
 
@@ -144,8 +144,8 @@ const Task1 = () => {
                 </div>
                 <div className="swap-rate-container">
 
-                <button className="btn" onClick={swap}>Swap</button>
-              
+                    <button className="btn" onClick={swap}>Swap</button>
+
                     <div className="rate" id="rate"></div>
                 </div>
                 <div className="currency">
