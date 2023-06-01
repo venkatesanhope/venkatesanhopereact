@@ -23,7 +23,9 @@ const TransactionAmountChange = useCallback((e: any)=>{
 
 /*const AddTransaction = useCallback(()=>{
   setbuttonexpenseAmount(transactionAmount)
-},[transactionAmount])*/
+},[transactionAmount])
+*/
+
 
 useEffect(()=>{
     setBalanceAmount( Math.abs(expenseAmount - incomeAmount) )
@@ -42,8 +44,7 @@ useEffect(()=>{
 },[buttonExpenseAmount,transactionAmount])
 
     return (
-       
-            <div className="Main">
+                   <div className="Main">
                 <h2>Expense Tracker</h2>
                 <div className="container">
                     <h4>Your Balance</h4>
