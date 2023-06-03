@@ -11,7 +11,7 @@ import Task2 from './component/Task2/Task2';
 function App() {
   return (
     <div className="App">
-        <Header></Header>
+        
        <Task2></Task2>
         
         <Footer></Footer>
@@ -20,6 +20,6 @@ function App() {
 }
 
 export default App;
-// <Tasktwo></Tasktwo><Task1></Task1>
+// <Tasktwo></Tasktwo><Task1></Task1><Header></Header>
 //<Taskrcol></Taskrcol>
 // <Dashboard></Dashboard><Studentinfo></Studentinfo>

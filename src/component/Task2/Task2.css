@@ -35,7 +35,7 @@ h4 {
 
 .inc-exp-container {
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);*/
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -83,7 +83,7 @@ input[type='number'] {
 .btn {
   
   background-color: #9c88ff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);*/
   color: #fff;
   border: 0;
   display: block;
@@ -103,8 +103,8 @@ input[type='number'] {
 
 .list li {
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  color: #333;
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);*/
+  color: #b99f9f;
   display: flex;
   justify-content: space-between;
   position: relative;
